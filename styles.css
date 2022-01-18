@@ -238,6 +238,9 @@ body {
 .text-light{
 	text-align:center
 }
+ul {
+  list-style-type: none;
+}
 
 li a {
 	color : white
