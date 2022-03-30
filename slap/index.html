@@ -11,10 +11,10 @@
   <script language="javascript" type="text/javascript" src="library/p5.dom.js"></script>
   <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400" rel="stylesheet" />
   <link rel="shortcut icon" href="/assets/favicon.ico" />
-  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
+  <!-- <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png" />
-  <link rel="manifest" href="assets/site.webmanifest" />
+  <link rel="manifest" href="assets/site.webmanifest" /> -->
   <link rel="stylesheet" href="style.css?v=1.4" />
   <title>O quão rápido você consegue estapear bolsonaro? Desperte seus instintos mais primitivos</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -50,23 +50,26 @@
       <span id="score" class="unselectable" onclick="swapUnit()">0km/h</span>
       <div id="tweet">
         <a
-          href="https://twitter.com/intent/tweet?url=https://jaerajair.com/slap&text=Eu%20estapeei%20Bolsonaro%20a%2048km/h!&hashtags=TapaNoBolsonaro">Tweet
-          your score.</a><br /><a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fjaerajair.com/slap"
-          target="_blank" class="share-popup">Share on Facebook.</a>
+          href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fjaerajair.com&text=Eu%20estapeei%20Bolsonaro%20a%200km%2Fh%21&hashtags=SlapChrisRock">Tweet
+          sua pontuação.</a><br /><a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fjaerajair.com"
+          target="_blank" class="share-popup">Compartilhe no Facebook.</a>      
       </div>
     </div>
 
     <div id="donation">
       <a href="https://jaerajair.com">jaerajair.com</a>
+         
       
-      
-      <br/>
-      <br/>
-      <img src='https://www.free-website-hit-counter.com/c.php?d=9&id=133153&s=18' border='0' alt='Free Website Hit Counter'> pessoas já estapearam o minto.
       
      
     </div>
 
+    <br/>
+    <br/>
+
+    <div id="units">
+      <img src='https://www.free-website-hit-counter.com/c.php?d=9&id=133153&s=18' border='0' alt='Free Website Hit Counter'> pessoas já estapearam o minto.
+    </div>
     <!-- <div id="units" onclick="swapUnit()">Slap in Freedom Units 🇺🇸</div> -->
   </div>
 
@@ -315,9 +318,9 @@
           ? Math.floor(speedFloat)
           : Math.floor(speedFloat / 1.609);
         score.innerHTML = `${speed}${metric ? "km/h" : "mph"}`;
-        tweet.innerHTML = `<a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fslapchris.com&text=I%20slapped%20Chris%20Rock%20${speed}${metric ? "km/h" : "mph"
-          }%21&hashtags=SlapChrisRock">Tweet your score.</a><br/><a href="http://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fslapchris.com&quote=I%20slapped%20Chris%20Rock%20${speed}${metric ? "km/h" : "mph"
-          }%21" target="_blank" class="share-popup">Share on Facebook.</a>`;
+        tweet.innerHTML = `<a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fjaerajair.com&text=Eu%20estapeei%20Bolsonaro%20a%20${speed}${metric ? "km/h" : "mph"
+          }%21&hashtags=SlapChrisRock">Compartilhe no twiter.</a><br/><a href="http://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fjaerajair.com&quote=Eu%20estapeei%20Bolsonaro%20a%20${speed}${metric ? "km/h" : "mph"
+          }%21" target="_blank" class="share-popup">Compartilhe no Facebook.</a>`;
         jiggy.stop();
 
         sounds[ Math.floor( Math.random() * 7) ].play();
