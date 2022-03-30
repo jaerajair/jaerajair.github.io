@@ -237,6 +237,9 @@
       sounds.push(loadSound("./assets/piada_sem_graca.mpeg"));
       sounds.push(loadSound("./assets/pode_me_culpar.mpeg"));
       sounds.push(loadSound("./assets/votei_no_lula.mpeg"));
+      sounds.push(loadSound("./assets/cara_grosso.mpeg"));
+      sounds.push(loadSound("./assets/globo.mpeg"));
+      datapa = loadSound("./assets/da_um_tapa.mpeg")
       
       
 
@@ -268,6 +271,7 @@
       cnv.style("transform", "translate(-50%, -50%)");
       ready.volume(0.4);
       ready.play();
+      datapa.play()
       hand = new Hand();
       face = new Face();
 
@@ -330,7 +334,7 @@
           }%21" target="_blank" class="share-popup">Compartilhe no Facebook.</a>`;
         jiggy.stop();
 
-        sounds[ Math.floor( Math.random() * 7) ].play();
+        sounds[ Math.floor( Math.random() * sounds.length) ].play();
         if (speedFloat >= 20) {
           tweet.style.fontSize = "1.2rem";          
           
