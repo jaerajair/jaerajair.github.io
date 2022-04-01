@@ -280,7 +280,7 @@
       }
     }
     function initScreen() {
-      document.getElementById("units").innerHTML = "<img src='https://www.free-website-hit-counter.com/c.php?d=9&id=133153&s=18' border='0' alt='Free Website Hit Counter'> pessoas já estapearam o minto."
+      
       background(250, 250, 250);
       fill(255);
       textAlign(CENTER);
@@ -310,7 +310,9 @@
       hand.show();
       face.show();
       if (startScreen === 1) {
+        document.getElementById("units").innerHTML = "<img src='https://www.free-website-hit-counter.com/c.php?d=9&id=133153&s=18' border='0' alt='Free Website Hit Counter'> pessoas já estapearam o minto."
         initScreen();
+        
       }
       if (
         ((hand.xpos < face.xpos + face.height &&
