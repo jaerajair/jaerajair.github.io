@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
-
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
@@ -25,16 +23,14 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://jaerajair.com/slap/" />
   <meta property="og:title" content="O quão rápido você consegue estapear bolsonaro?" />
-  <meta property="og:description"
-    content="De uns tapas em bolsonaro" />
-  
+  <meta property="og:description" content="De uns tapas em bolsonaro" />
+
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:url" content="https://jaerajair.com/slap/" />
   <meta name="twitter:title" content="O quão rápido você consegue estapear bolsonaro?" />
-  <meta name="twitter:description"
-    content="Os tapas mais rápidos requerem seus instintos mais primitivos." />  
+  <meta name="twitter:description" content="Os tapas mais rápidos requerem seus instintos mais primitivos." />
 </head>
 
 <body>
@@ -62,20 +58,22 @@
       <div id="tweet">
         <a
           href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fjaerajair.com/slap&text=Eu%20estapeei%20Bolsonaro%20a%200km%2Fh%21&hashtags=TapaNoBolsonaro">Tweet
-          sua pontuação.</a><br /><a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fjaerajair.com/slap"
-          target="_blank" class="share-popup">Compartilhe no Facebook.</a>      
+          sua pontuação.</a><br /><a
+          href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fjaerajair.com/slap" target="_blank"
+          class="share-popup">Compartilhe no Facebook.</a>
       </div>
     </div>
 
     <div id="donation">
-      <a href="https://jaerajair.com">jaerajair.com</a>     
+      <a href="https://jaerajair.com">jaerajair.com</a>
     </div>
 
-    <br/>
-    <br/>
+    <br />
+    <br />
 
     <div id="units">
-      <!--<img src='https://www.free-website-hit-counter.com/c.php?d=9&id=133153&s=18' border='0' alt='Free Website Hit Counter'> pessoas já estapearam o minto.-->
+      <!-- <img src='https://www.free-website-hit-counter.com/c.php?d=9&id=133153&s=18' border='0'
+        alt='Free Website Hit Counter'> pessoas já estapearam o minto. -->
     </div>
     <!-- <div id="units" onclick="swapUnit()">Slap in Freedom Units 🇺🇸</div> -->
   </div>
@@ -88,8 +86,10 @@
     document.addEventListener("touchmove", preventBehavior, {
       passive: false,
     });
+
+
     function Face() {
-      this.faceImg = chris;
+      this.faceImg = personagem.img_frente;
       this.height = 80;
       this.width = 80;
       this.gravity = 0.2;
@@ -212,6 +212,22 @@
       if (hand.onBall(mouseX, mouseY)) hand.startDrag();
     }
 
+    function Personagem(nome) {
+
+      return {
+        name: nome,
+        music: null,
+        bordao: null,
+        sounds: [],
+        images: [],
+        start: [],
+        img_frente: null,
+        img_esq: null,
+        img_dir: null
+      }
+
+    }
+
     function mouseReleased() {
       if (
         !(
@@ -230,6 +246,40 @@
 
     sounds = []
     function preload() {
+
+      personagens = [];
+
+      bozo = new Personagem("Bolsonaro");
+      bozo.music = loadSound("./assets/bolsonaro_vai_tomar.mp3");
+      bozo.sounds.push(loadSound("./assets/dei_azar.mpeg"))
+      bozo.sounds.push(loadSound("./assets/enfia_porrada.mpeg"));
+      bozo.sounds.push(loadSound("./assets/me_chama_de_corrupto.mpeg"));
+      bozo.sounds.push(loadSound("./assets/o_virus_sou_eu.mpeg"));
+      bozo.sounds.push(loadSound("./assets/piada_sem_graca.mpeg"));
+      bozo.sounds.push(loadSound("./assets/pode_me_culpar.mpeg"));
+      bozo.sounds.push(loadSound("./assets/votei_no_lula.mpeg"));
+      bozo.sounds.push(loadSound("./assets/cara_grosso.mpeg"));
+      bozo.sounds.push(loadSound("./assets/globo.mpeg"));
+      bozo.bordao = loadSound("./assets/da_um_tapa.mpeg");
+      datapa = loadSound("./assets/da_um_tapa.mpeg")
+      bozo.img_frente = loadImage("assets/bozo_frente.png");
+      bozo.img_esq = loadImage("assets/bozo_slap_left.png");
+      bozo.img_dir = loadImage("assets/bozo_slap_right.png");
+      personagens.push(bozo);
+
+
+      // damares = new Personagem("Damares");
+      // damares.img_frente = loadImage("assets/damares_frente.png");
+      // damares.img_esq = loadImage("assets/damares_slap_left.png");
+      // damares.img_dir = loadImage("assets/damares_slap_right.png");
+      // personagens.push(damares);
+
+      // bananinha = Personagem("Eduardo B.");
+      // bananinha.img_frente = loadImage("assets/bananinha_frente.png");
+      // bananinha.img_esq = loadImage("assets/bananinha_slap_left.png");
+      // bananinha.img_dir = loadImage("assets/bananinha_slap_right.png");
+      // personagens.push(bananinha);
+
       sounds.push(loadSound("./assets/dei_azar.mpeg"))
       sounds.push(loadSound("./assets/enfia_porrada.mpeg"));
       sounds.push(loadSound("./assets/me_chama_de_corrupto.mpeg"));
@@ -238,10 +288,10 @@
       sounds.push(loadSound("./assets/pode_me_culpar.mpeg"));
       sounds.push(loadSound("./assets/votei_no_lula.mpeg"));
       sounds.push(loadSound("./assets/cara_grosso.mpeg"));
-      sounds.push(loadSound("./assets/globo.mpeg"));
+      sounds.push(loadSound("./assets/globo.mpeg"));  
       datapa = loadSound("./assets/da_um_tapa.mpeg")
-      
-      
+
+
 
       slapsfx0 = loadSound("./assets/slap_str0.mp3");
       slapsfx1 = loadSound("./assets/slap_str1.mp3");
@@ -259,6 +309,40 @@
       rarehand1 = loadImage("assets/rarehand1.png");
       rarehand2 = loadImage("assets/rarehand2.png");
       handimg = loadImage("assets/hand3.png");
+
+      dice = Math.floor( Math.random() * 100);
+      console.log(dice);
+
+      if(dice >= 40  && dice <= 50 )
+      {
+          bozo.name = "Damares Alves";
+          bozo.img_frente = loadImage("assets/damares_frente.png");
+          bozo.img_esq = loadImage("assets/damares_slap_left.png");
+          bozo.img_dir = loadImage("assets/damares_slap_right.png");
+      }
+      else if(dice >= 61 && dice <= 80)
+      
+      {        
+        bozo.name = "Eduardo Bananinha";
+        bozo.img_frente = loadImage("assets/bananinha_frente.png");
+        bozo.img_esq = loadImage("assets/bananinha_slap_left.png");
+        bozo.img_dir = loadImage("assets/bananinha_slap_right.png");
+        handstart = loadImage("assets/banana2.png");
+        handimg = loadImage("assets/banana3.png");
+
+      }
+
+
+      //personagem = personagens[Math.floor(Math.random() * personagens.length)];
+
+
+      personagem = personagens[0];
+      speed = 1;
+      tweet.innerHTML = `<a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fjaerajair.com/slap&text=Eu%20estapeei%20${personagem.name}%20a%20${speed}${metric ? "km/h" : "mph"
+          }%21&hashtags=TapaNoBolsonaro">Compartilhe no twiter.</a><br/><a href="http://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fjaerajair.com/slap&quote=Eu%20estapeei%20Bolsonaro%20a%20${speed}${metric ? "km/h" : "mph"
+          }%21" target="_blank" class="share-popup">Compartilhe no Facebook.</a>`;
+
+      console.log(personagem.name);
     }
 
     function setup() {
@@ -280,16 +364,13 @@
       }
     }
     function initScreen() {
-      
       background(250, 250, 250);
       fill(255);
       textAlign(CENTER);
       image(hand.img, W / 2 - 100, H / 2 - 100, 200, 200);
       fill(0);
       textSize(W / 10);
-      text("Clique para bater", W / 2, H / 2 - 150);
-      
-      
+      text("Clique para estapear", W / 2, H / 2 - 150);
     }
     function resetGame() {
       tweet.style.fontSize = "1.05rem";
@@ -310,9 +391,7 @@
       hand.show();
       face.show();
       if (startScreen === 1) {
-        //document.getElementById("units").innerHTML = "<img src='https://www.free-website-hit-counter.com/c.php?d=9&id=133153&s=18' border='0' alt='Free Website Hit Counter'> pessoas já estapearam o minto."
         initScreen();
-        
       }
       if (
         ((hand.xpos < face.xpos + face.height &&
@@ -322,7 +401,7 @@
           hand.xpos > W) &&
         face.collision === false
       ) {
-        face.faceImg = hand.v_speed_x > 0 ? slapLeft : slapRight;
+        face.faceImg = hand.v_speed_x > 0 ? personagem.img_esq :  personagem.img_dir ;
         face.velocity_x = hand.v_speed_x * 0.1;
         face.velocity_y = hand.v_speed * 0.1;
         face.collision = true;
@@ -333,21 +412,19 @@
         const speed = metric
           ? Math.floor(speedFloat)
           : Math.floor(speedFloat / 1.609);
-        score.innerHTML = `${speed}${metric ? "km/h" : "mph"}`;
-        tweet.innerHTML = `<a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fjaerajair.com/slap&text=Eu%20estapeei%20Bolsonaro%20a%20${speed}${metric ? "km/h" : "mph"
+        score.innerHTML = `${speed}${metric ? "km/h" : "mph"}<br/>`;
+        tweet.innerHTML = `<a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fjaerajair.com/slap&text=Eu%20estapeei%20${personagem.name}%20a%20${speed}${metric ? "km/h" : "mph"
           }%21&hashtags=TapaNoBolsonaro">Compartilhe no twiter.</a><br/><a href="http://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fjaerajair.com/slap&quote=Eu%20estapeei%20Bolsonaro%20a%20${speed}${metric ? "km/h" : "mph"
           }%21" target="_blank" class="share-popup">Compartilhe no Facebook.</a>`;
-        jiggy.stop();
+        personagem.music.stop();
 
-        sounds[ Math.floor( Math.random() * sounds.length) ].play();
+        personagem.sounds[Math.floor(Math.random() * personagem.sounds.length)].play();
         if (speedFloat >= 20) {
-          tweet.style.fontSize = "1.2rem";          
-          
+          tweet.style.fontSize = "1.2rem";
           slapsfx5.play();
           amplitude = new p5.Amplitude();
-          
-          jiggy.setVolume(.3)
-          jiggy.play();
+          personagem.music.setVolume(.3)
+          personagem.music.play();
           score.style.transition = ".2s";
           score.style.fontSize = "80px";
           score.style.color = "#22e51d";
@@ -414,14 +491,9 @@
       hand = new Hand();
       face = new Face();
     }
-    
-    
-    document.addEventListener("DOMContentLoaded", function(){
-      //document.getElementById("units").innerHTML = "<img src='https://www.free-website-hit-counter.com/c.php?d=9&id=133153&s=18' border='0' alt='Free Website Hit Counter'> pessoas já estapearam o minto."
-    });
-    //
   </script>
-  
+  <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1320355987077068"
+     crossorigin="anonymous"></script> -->
 </body>
 
 </html>
