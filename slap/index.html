@@ -96,7 +96,7 @@
       this.velocity_x = 0;
       this.velocity_y = 0;
       this.ypos = height / 2 - 100;
-      this.xpos = W - this.width - 150;
+      this.xpos = W - this.width - 50;
       this.collision = false;
 
       this.show = function () {
@@ -357,6 +357,7 @@
       speed = 1;
       tweet.innerHTML = `
       <a target="_blank" href="https://bolsomaster.site/">No Fl&aacute;vio Bolsonaro está envolvido</a> <br />
+      <a target="_self" href="/slap/">Trocar personagem</a> <br />
       <a target="_blank" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fjaerajair.github.io/slap&text=Eu%20estapeei%20${personagem.name}%20a%20${speed}${metric ? "km/h" : "mph"
 
           }%21&hashtags=TapaNoBolsonaro%2CCPIdoMEC">Compartilhe no twiter.</a><br/><a href="http://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fjaerajair.github.io/slap&quote=Eu%20estapeei%20${personagem.name}%20a%20${speed}${metric ? "km/h" : "mph"
@@ -435,6 +436,7 @@
         score.innerHTML = `${speed}${metric ? "km/h" : "mph"}<br/>`;
         tweet.innerHTML = `
         <a target="_blank" href="https://bolsomaster.site/">Fl&aacute;vio Bolsonaro </a> <br />
+        <a target="_self" href="/slap/">Trocar personagem</a> <br />
         <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fjaerajair.github.io/slap&text=Eu%20estapeei%20${personagem.name}%20a%20${speed}${metric ? "km/h" : "mph"
           }%21&hashtags=TapaNoBolsonaro">Compartilhe no twiter.</a><br/><a href="http://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fjaerajair.github.io/slap&quote=Eu%20estapeei%20${personagem.name}%20a%20${speed}${metric ? "km/h" : "mph"
           }%21" target="_blank" class="share-popup">Compartilhe no Facebook.</a>`;
