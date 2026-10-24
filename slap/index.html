@@ -321,13 +321,21 @@
           bozo.img_esq = loadImage("assets/damares_slap_left.png");
           bozo.img_dir = loadImage("assets/damares_slap_right.png");
       }
-      else if(dice < 71)
+      else if(dice < 40)
       {
         // Cagão: sem falas, só música aleatória (pergunta_01 a pergunta_08)
         bozo.sounds = [];
         for (let i = 1; i <= 8; i++) {
           bozo.musics.push(loadSound(`./assets/pergunta_0${i}.mp3`));
         }
+      }
+      else if(dice < 71)
+      {
+        // Bolsonaro: mantém as falas e a música originais
+        bozo.name = "Bolsonaro";
+        bozo.img_frente = loadImage("assets/bozo_frente.png");
+        bozo.img_esq = loadImage("assets/bozo_slap_left.png");
+        bozo.img_dir = loadImage("assets/bozo_slap_right.png");
       }
       else if(dice >= 71 && dice <= 99)
 
