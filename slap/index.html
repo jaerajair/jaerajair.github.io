@@ -249,7 +249,7 @@
 
       personagens = [];
 
-      bozo = new Personagem("Bolsonaro");
+      bozo = new Personagem("Cagão");
       bozo.music = loadSound("./assets/bolsonaro_vai_tomar.mp3");
       bozo.sounds.push(loadSound("./assets/dei_azar.mpeg"))
       bozo.sounds.push(loadSound("./assets/enfia_porrada.mpeg"));
@@ -262,9 +262,9 @@
       bozo.sounds.push(loadSound("./assets/globo.mpeg"));
       bozo.bordao = loadSound("./assets/da_um_tapa.mpeg");
       datapa = loadSound("./assets/da_um_tapa.mpeg")
-      bozo.img_frente = loadImage("assets/bozo_frente.png");
-      bozo.img_esq = loadImage("assets/bozo_slap_left.png");
-      bozo.img_dir = loadImage("assets/bozo_slap_right.png");
+      bozo.img_frente = loadImage("assets/cagao_frente.png");
+      bozo.img_esq = loadImage("assets/cagao_left.png");
+      bozo.img_dir = loadImage("assets/cagao_right.png");
       personagens.push(bozo);
 
 
@@ -339,7 +339,7 @@
       personagem = personagens[0];
       speed = 1;
       tweet.innerHTML = `<a target="_blank" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fjaerajair.com/slap&text=Eu%20estapeei%20${personagem.name}%20a%20${speed}${metric ? "km/h" : "mph"
-          }%21&hashtags=TapaNoBolsonaro%2CCPIdoMEC">Compartilhe no twiter.</a><br/><a href="http://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fjaerajair.com/slap&quote=Eu%20estapeei%20Bolsonaro%20a%20${speed}${metric ? "km/h" : "mph"
+          }%21&hashtags=TapaNoBolsonaro%2CCPIdoMEC">Compartilhe no twiter.</a><br/><a href="http://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fjaerajair.com/slap&quote=Eu%20estapeei%20${personagem.name}%20a%20${speed}${metric ? "km/h" : "mph"
           }%21" target="_blank" class="share-popup">Compartilhe no Facebook.</a>`;
 
       document.title = `De um tapa em ${personagem.name}!`;
@@ -414,7 +414,7 @@
           : Math.floor(speedFloat / 1.609);
         score.innerHTML = `${speed}${metric ? "km/h" : "mph"}<br/>`;
         tweet.innerHTML = `<a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fjaerajair.com/slap&text=Eu%20estapeei%20${personagem.name}%20a%20${speed}${metric ? "km/h" : "mph"
-          }%21&hashtags=TapaNoBolsonaro">Compartilhe no twiter.</a><br/><a href="http://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fjaerajair.com/slap&quote=Eu%20estapeei%20Bolsonaro%20a%20${speed}${metric ? "km/h" : "mph"
+          }%21&hashtags=TapaNoBolsonaro">Compartilhe no twiter.</a><br/><a href="http://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fjaerajair.com/slap&quote=Eu%20estapeei%20${personagem.name}%20a%20${speed}${metric ? "km/h" : "mph"
           }%21" target="_blank" class="share-popup">Compartilhe no Facebook.</a>`;
         personagem.music.stop();
 
