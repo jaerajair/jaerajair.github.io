@@ -21,14 +21,14 @@
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://jaerajair.com/slap/" />
+  <meta property="og:url" content="https://jaerajair.github.io/slap/" />
   <meta property="og:title" content="O quão rápido você consegue estapear bolsonaro?" />
   <meta property="og:description" content="De uns tapas em bolsonaro" />
 
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:url" content="https://jaerajair.com/slap/" />
+  <meta name="twitter:url" content="https://jaerajair.github.io/slap/" />
   <meta name="twitter:title" content="O quão rápido você consegue estapear bolsonaro?" />
   <meta name="twitter:description" content="Os tapas mais rápidos requerem seus instintos mais primitivos." />
 </head>
@@ -57,15 +57,15 @@
       <span id="score" class="unselectable" onclick="swapUnit()">0km/h</span>
       <div id="tweet">
         <a
-          href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fjaerajair.com/slap&text=Eu%20estapeei%20Bolsonaro%20a%200km%2Fh%21&hashtags=TapaNoBolsonaro">Tweet
+          href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fjaerajair.github.io/slap&text=Eu%20estapeei%20Bolsonaro%20a%200km%2Fh%21&hashtags=TapaNoBolsonaro">Tweet
           sua pontuação.</a><br /><a
-          href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fjaerajair.com/slap" target="_blank"
+          href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fjaerajair.github.io/slap" target="_blank"
           class="share-popup">Compartilhe no Facebook.</a>
       </div>
     </div>
 
     <div id="donation">
-      <a href="https://jaerajair.com">jaerajair.com</a>
+      <a href="https://jaerajair.github.io">jaerajair.github.io</a>
     </div>
 
     <br />
@@ -338,8 +338,8 @@
 
       personagem = personagens[0];
       speed = 1;
-      tweet.innerHTML = `<a target="_blank" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fjaerajair.com/slap&text=Eu%20estapeei%20${personagem.name}%20a%20${speed}${metric ? "km/h" : "mph"
-          }%21&hashtags=TapaNoBolsonaro%2CCPIdoMEC">Compartilhe no twiter.</a><br/><a href="http://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fjaerajair.com/slap&quote=Eu%20estapeei%20${personagem.name}%20a%20${speed}${metric ? "km/h" : "mph"
+      tweet.innerHTML = `<a target="_blank" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fjaerajair.github.io/slap&text=Eu%20estapeei%20${personagem.name}%20a%20${speed}${metric ? "km/h" : "mph"
+          }%21&hashtags=TapaNoBolsonaro%2CCPIdoMEC">Compartilhe no twiter.</a><br/><a href="http://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fjaerajair.github.io/slap&quote=Eu%20estapeei%20${personagem.name}%20a%20${speed}${metric ? "km/h" : "mph"
           }%21" target="_blank" class="share-popup">Compartilhe no Facebook.</a>`;
 
       document.title = `De um tapa em ${personagem.name}!`;
@@ -413,8 +413,8 @@
           ? Math.floor(speedFloat)
           : Math.floor(speedFloat / 1.609);
         score.innerHTML = `${speed}${metric ? "km/h" : "mph"}<br/>`;
-        tweet.innerHTML = `<a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fjaerajair.com/slap&text=Eu%20estapeei%20${personagem.name}%20a%20${speed}${metric ? "km/h" : "mph"
-          }%21&hashtags=TapaNoBolsonaro">Compartilhe no twiter.</a><br/><a href="http://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fjaerajair.com/slap&quote=Eu%20estapeei%20${personagem.name}%20a%20${speed}${metric ? "km/h" : "mph"
+        tweet.innerHTML = `<a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fjaerajair.github.io/slap&text=Eu%20estapeei%20${personagem.name}%20a%20${speed}${metric ? "km/h" : "mph"
+          }%21&hashtags=TapaNoBolsonaro">Compartilhe no twiter.</a><br/><a href="http://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fjaerajair.github.io/slap&quote=Eu%20estapeei%20${personagem.name}%20a%20${speed}${metric ? "km/h" : "mph"
           }%21" target="_blank" class="share-popup">Compartilhe no Facebook.</a>`;
         personagem.music.stop();
 
