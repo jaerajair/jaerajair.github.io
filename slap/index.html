@@ -65,7 +65,7 @@
     </div>
 
     <div id="donation">
-      <a href="https://jaerajair.github.io">jaerajair.github.io</a>
+      <!-- <a href="https://jaerajair.github.io">jaerajair.github.io</a> -->
     </div>
 
     <br />
@@ -355,7 +355,10 @@
 
       personagem = personagens[0];
       speed = 1;
-      tweet.innerHTML = `<a target="_blank" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fjaerajair.github.io/slap&text=Eu%20estapeei%20${personagem.name}%20a%20${speed}${metric ? "km/h" : "mph"
+      tweet.innerHTML = `
+      <a target="_blank" href="https://bolsomaster.site/">No Fl&aacute;vio Bolsonaro está envolvido</a> <br />
+      <a target="_blank" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fjaerajair.github.io/slap&text=Eu%20estapeei%20${personagem.name}%20a%20${speed}${metric ? "km/h" : "mph"
+
           }%21&hashtags=TapaNoBolsonaro%2CCPIdoMEC">Compartilhe no twiter.</a><br/><a href="http://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fjaerajair.github.io/slap&quote=Eu%20estapeei%20${personagem.name}%20a%20${speed}${metric ? "km/h" : "mph"
           }%21" target="_blank" class="share-popup">Compartilhe no Facebook.</a>`;
 
@@ -430,7 +433,9 @@
           ? Math.floor(speedFloat)
           : Math.floor(speedFloat / 1.609);
         score.innerHTML = `${speed}${metric ? "km/h" : "mph"}<br/>`;
-        tweet.innerHTML = `<a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fjaerajair.github.io/slap&text=Eu%20estapeei%20${personagem.name}%20a%20${speed}${metric ? "km/h" : "mph"
+        tweet.innerHTML = `
+        <a target="_blank" href="https://bolsomaster.site/">Fl&aacute;vio Bolsonaro </a> <br />
+        <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fjaerajair.github.io/slap&text=Eu%20estapeei%20${personagem.name}%20a%20${speed}${metric ? "km/h" : "mph"
           }%21&hashtags=TapaNoBolsonaro">Compartilhe no twiter.</a><br/><a href="http://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fjaerajair.github.io/slap&quote=Eu%20estapeei%20${personagem.name}%20a%20${speed}${metric ? "km/h" : "mph"
           }%21" target="_blank" class="share-popup">Compartilhe no Facebook.</a>`;
         personagem.music.stop();
