@@ -323,7 +323,8 @@
       }
       else if(dice < 71)
       {
-        // Cagão: música aleatória (pergunta_01 a pergunta_08)
+        // Cagão: sem falas, só música aleatória (pergunta_01 a pergunta_08)
+        bozo.sounds = [];
         for (let i = 1; i <= 8; i++) {
           bozo.musics.push(loadSound(`./assets/pergunta_0${i}.mp3`));
         }
@@ -429,7 +430,9 @@
           ? personagem.musics[Math.floor(Math.random() * personagem.musics.length)]
           : personagem.music;
 
-        personagem.sounds[Math.floor(Math.random() * personagem.sounds.length)].play();
+        if (personagem.sounds.length) {
+          personagem.sounds[Math.floor(Math.random() * personagem.sounds.length)].play();
+        }
         if (speedFloat >= 20) {
           tweet.style.fontSize = "1.2rem";
           slapsfx5.play();
